@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+📦 MDSCravex
+MDSCravex is a modern, full-stack web toolkit built with Next.js 15, offering secure encryption, API testing, and JSON formatting utilities – all in one unified UI. Ideal for developers, testers, and security-conscious users.
 
-## Getting Started
 
-First, run the development server:
+🚀 Features
+🔐 Encryption Tool
+Easily encrypt/decrypt strings, numbers, or JSON using your own master key with support from the double-cryptograpgy npm package.
 
-```bash
+🔬 API Tester
+Quickly craft and send HTTP requests with custom headers and bodies.
+
+🧩 JSON Formatter
+Format and validate JSON with syntax highlighting and error messaging.
+
+🌙 Dark theme compatible (based on your color theme: #eeb6f3, #a931a2, #6e3d73).
+
+🛠️ Tech Stack
+Framework: Next.js 14
+
+Styling: Tailwind CSS
+
+Animations: Framer Motion
+
+Icons: Lucide React
+
+Encryption: double-cryptograpgy (custom npm package)
+
+📂 Project Structure
+bash
+Copy
+Edit
+/app
+  /api
+    /cryptography
+  /components
+    Nav.tsx
+    Footer.tsx
+    Features.tsx
+  /cryptography
+    page.tsx
+  /json-formatter
+    page.tsx
+  /api-tester
+    page.tsx
+  /privacy-policy
+    page.tsx
+  /terms-of-service
+    page.tsx
+/public
+/styles
+  globals.css
+📦 Installation
+bash
+Copy
+Edit
+# Clone the project
+git clone https://github.com/your-username/mdscravex.git
+cd mdscravex
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The app will be available at: http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🔐 Environment Variables
+No external environment variables required. Cryptographic operations use a dynamic master key input from the UI.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🧪 Usage
+Navigate to /cryptography to encrypt/decrypt using your master key.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Use /json-formatter to format and validate JSON input.
 
-## Learn More
+Visit /api-tester to send test requests to external APIs.
 
-To learn more about Next.js, take a look at the following resources:
+📝 License
+This project is licensed under the MIT License.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🙏 Acknowledgements
+Next.js
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Tailwind CSS
 
-## Deploy on Vercel
+Lucide Icons
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Framer Motion
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+double-cryptograpgy
