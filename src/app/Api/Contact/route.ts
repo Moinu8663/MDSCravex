@@ -2,7 +2,7 @@
 import nodemailer from 'nodemailer';
 
 export async function POST(req: Request) {
-  const { email, message } = await req.json();
+  const {name, email, message } = await req.json();
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -17,7 +17,20 @@ export async function POST(req: Request) {
     from: email,           
     to: process.env.GMAIL_USER,  
     subject: 'For MDSCraves Query.',
-    text: message,                         
+ html: `
+    <div style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">
+      <p>Dear Team,</p>
+      <p>${message.replace(/\n/g, '<br>')}</p>
+
+      <br />
+      <p>Kind regards,</p>
+      <p>${name || 'Anonymous'}</p>
+      <p>Email: ${email}</p>
+
+      <hr style="margin-top: 30px;"/>
+      <p style="font-size: 13px; color: #999;">Sent via MDSCravex Contact Form</p>
+    </div>
+  `,
   };
 
   try {
